@@ -18,7 +18,23 @@
 		9C22D4931839E84900C8ABA8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C22D4721839E84900C8ABA8 /* Cocoa.framework */; };
 		9C22D49B1839E84900C8ABA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C22D4991839E84900C8ABA8 /* InfoPlist.strings */; };
 		9C22D49D1839E84900C8ABA8 /* LinkMSWordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C22D49C1839E84900C8ABA8 /* LinkMSWordTests.m */; };
+		9C22D4A81839E94700C8ABA8 /* Microsoft Word.app in Resources */ = {isa = PBXBuildFile; fileRef = 9C22D4A71839E94700C8ABA8 /* Microsoft Word.app */; };
+		9C22D4A91839E94700C8ABA8 /* Microsoft Word.app in Resources */ = {isa = PBXBuildFile; fileRef = 9C22D4A71839E94700C8ABA8 /* Microsoft Word.app */; };
+		9C22D4AC1839EBEF00C8ABA8 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C22D4AB1839EBEF00C8ABA8 /* ScriptingBridge.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		9C22D4AA1839EB5000C8ABA8 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sed 's/<enumerator code=\"0x02470033\"/<enumerator name=\"def0\" code=\"0x02470033\"/g' |  sed 's/<enumerator code=\"0x02caffff\"/<enumerator name=\"def1\" code=\"0x02caffff\"/g' | sed 's/<enumerator code=\"0x02cb0000\"/<enumerator name=\"def2\" code=\"0x02cb0000\"/g' | sed 's/<enumerator code=\"0x02cb0001\"/<enumerator name=\"def3\" code=\"0x02cb0001\"/g' | sed 's/<enumerator code=\"0x02cb0002\"/<enumerator name=\"def4\" code=\"0x02cb0002\"/g' | sed 's/<enumerator code=\"0x02cb0003\"/<enumerator name=\"def5\" code=\"0x02cb0003\"/g' | sed 's/<enumerator code=\"0x02cb0004\"/<enumerator name=\"def6\" code=\"0x02cb0004\"/g' | sed 's/<enumerator code=\"0x02cb0005\"/<enumerator name=\"def7\" code=\"0x02cb0005\"/g' | sed 's/<enumerator code=\"0x02cb0006\"/<enumerator name=\"def8\" code=\"0x02cb0006\"/g' | sed 's/<enumerator code=\"0x02cb0007\"/<enumerator name=\"def9\" code=\"0x02cb0007\"/g' | sed 's/<enumerator code=\"0x02cb0008\"/<enumerator name=\"def10\" code=\"0x02cb0008\"/g' | sed 's/<enumerator code=\"0x02cb0009\"/<enumerator name=\"def11\" code=\"0x02cb0009\"/g' | sed 's/<enumerator code=\"0x02cb000a\"/<enumerator name=\"def12\" code=\"0x02cb000a\"/g' | sed 's/<enumerator code=\"0x02cb000b\"/<enumerator name=\"def13\" code=\"0x02cb000b\"/g' | sed 's/<enumerator code=\"0x02cb000c\"/<enumerator name=\"def14\" code=\"0x02cb000c\"/g' | sed 's/<enumerator code=\"0x02cb000d\"/<enumerator name=\"def15\" code=\"0x02cb000d\"/g' | sed 's/<enumerator code=\"0x02cb000e\"/<enumerator name=\"def16\" code=\"0x02cb000e\"/g' | sed 's/<enumerator code=\"0x02cb000f\"/<enumerator name=\"def17\" code=\"0x02cb000f\"/g' | sed 's/<enumerator name=\"format document97\" code=\"0x02310000\"/<enumerator name=\"format document97i\" code=\"0x023100a0\"/' | sed 's/<enumerator name=\"format template97\" code=\"0x02310001\"/<enumerator name=\"format template97i\" code=\"0x023100a1\"/' | sed 's/enumerator name=\"format Unicode text\" code=\"0x02310007\"/enumerator name=\"format Unicode texti\" code=\"0x023100a7\"/' | sed 's/<command name=\"get border\" code=\"sTXTwBtr\"/<command name=\"get borderi\" code=\"sTXTwBtr\"/' | sed 's/command name=\"reset\" code=\"sTXTmFBr\"/command name=\"reseti\" code=\"sTXTmFBr\"/' | sed 's/<command name=\"get border\" code=\"sTBLwBtr\"/<command name=\"get borderi2\" code=\"sTBLwBtr\"/' | sed 's/property name=\"char\" code=\"14Aj\"/property name=\"char1\" code=\"14Aj\"/' | sed 's/property name=\"case\" code=\"1721\" type=\"e125\"/property name=\"case1\" code=\"1721\" type=\"e125\"/'  | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		9C22D4941839E84900C8ABA8 /* PBXContainerItemProxy */ = {
@@ -50,6 +66,9 @@
 		9C22D4981839E84900C8ABA8 /* LinkMSWordTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkMSWordTests-Info.plist"; sourceTree = "<group>"; };
 		9C22D49A1839E84900C8ABA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C22D49C1839E84900C8ABA8 /* LinkMSWordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkMSWordTests.m; sourceTree = "<group>"; };
+		9C22D4A61839E92100C8ABA8 /* MicrosoftWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicrosoftWord.h; sourceTree = "<group>"; };
+		9C22D4A71839E94700C8ABA8 /* Microsoft Word.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = "Microsoft Word.app"; path = "../../../../../../Applications/Microsoft Office 2011/Microsoft Word.app"; sourceTree = "<group>"; };
+		9C22D4AB1839EBEF00C8ABA8 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C22D4AC1839EBEF00C8ABA8 /* ScriptingBridge.framework in Frameworks */,
 				9C22D4731839E84900C8ABA8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +115,7 @@
 		9C22D4711839E84900C8ABA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C22D4AB1839EBEF00C8ABA8 /* ScriptingBridge.framework */,
 				9C22D4721839E84900C8ABA8 /* Cocoa.framework */,
 				9C22D4911839E84900C8ABA8 /* XCTest.framework */,
 				9C22D4741839E84900C8ABA8 /* Other Frameworks */,
@@ -115,6 +136,7 @@
 		9C22D4781839E84900C8ABA8 /* LinkMSWord */ = {
 			isa = PBXGroup;
 			children = (
+				9C22D4A61839E92100C8ABA8 /* MicrosoftWord.h */,
 				9C22D4841839E84900C8ABA8 /* AppDelegate.h */,
 				9C22D4851839E84900C8ABA8 /* AppDelegate.m */,
 				9C22D4871839E84900C8ABA8 /* MainMenu.xib */,
@@ -127,6 +149,7 @@
 		9C22D4791839E84900C8ABA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C22D4A71839E94700C8ABA8 /* Microsoft Word.app */,
 				9C22D47A1839E84900C8ABA8 /* LinkMSWord-Info.plist */,
 				9C22D47B1839E84900C8ABA8 /* InfoPlist.strings */,
 				9C22D47E1839E84900C8ABA8 /* main.m */,
@@ -166,6 +189,7 @@
 				9C22D46D1839E84900C8ABA8 /* Resources */,
 			);
 			buildRules = (
+				9C22D4AA1839EB5000C8ABA8 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -230,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C22D4A81839E94700C8ABA8 /* Microsoft Word.app in Resources */,
 				9C22D47D1839E84900C8ABA8 /* InfoPlist.strings in Resources */,
 				9C22D48B1839E84900C8ABA8 /* Images.xcassets in Resources */,
 				9C22D4831839E84900C8ABA8 /* Credits.rtf in Resources */,
@@ -242,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C22D49B1839E84900C8ABA8 /* InfoPlist.strings in Resources */,
+				9C22D4A91839E94700C8ABA8 /* Microsoft Word.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
